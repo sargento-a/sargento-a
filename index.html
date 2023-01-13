@@ -9,10 +9,15 @@
     />
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/1f5f25b2f0.js" crossorigin="anonymous"></script>
     <title>Anthony SARGENTO - Portfolio</title>
   </head>
   <div class="App">
     <header class="App-header">
+      <div class="Topnav">
+        <button class="btn" type="submit" onclick="window.open('CV_2023-01-13_Anthony_SARGENTO.pdf')"><h1><i class="fa fa-download"></i> MON CV</h1></button>
+      </div>
       <h1>Bonjour !<br/> Je suis Anthony Sargento</h1>
     </header>
     <img 
@@ -20,6 +25,40 @@
       src="wave.svg"
       />
     <body class="App-body">
+      <button onclick="topFunction()" id="myBtn" title="Remonter"><i class="fa fa-angle-double-up" style='font-size:24px'></i></button>
+      <script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+      <h1>À propos</h1>
+      <div id="propos">
+        <p>Ayant utilisé des ordinateurs pour jouer ou pour travailler depuis le plus jeune age l'informatique était une évidence pour moi. J'apprends vite les choses et bien alors apprendre de nouveaux languages n'est pas un souci. Si je peux utiliser un language que j'apprécie c'est encore mieux.</p>
+      </div>
+      <h1>Compétences</h1>
+      <div id="comp">
+        <p>Python</p>
+        <p>Typescript/Javascript (NextJS/React ExpressJS Sequelize NodeJS)</p>
+        <p>SQL</p>
+        <p>HTML/CSS</p>
+
+      </div>
       <h1>Projets</h1>
         <div class='container' id='HC'>
           <img
@@ -34,13 +73,14 @@
           />
           <div class='Ptext'>
             <h2>Hyrule Castle<br/></h2>
-            <p>test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test </p>
+            <p>Mini RPG en Typescript, Jouable avec le terminal, choix d'action, Héro aléatoirement choisi au début de la partie, choix de la taille du donjon , statistiques de force, armure, vitesse, vitalité par personnage et monstre, après avoir combattu 9 monstre le 10ème est un boss.</p>
           </div>
         </div>
         <div class='container' id='TF'>
           <div class='Ptext'>
             <h2>The Forge<br/></h2>
-            <p>test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test </p>
+            <p>Création d'un de site de vente avec une API ExpressJS communicant avec un front lui NextJS et une database en SQL avec Sequelize
+            </p>
           </div>
           <img
           class='TF-img'
@@ -59,7 +99,9 @@
       src="wave(1).svg"
       />
     <footer class="App-footer">
-      footer
+      <div id="flexFooter">
+
+      </div>
     </footer>
   </div>
 </html>
